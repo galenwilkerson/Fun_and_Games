@@ -1,0 +1,13 @@
+remove:
+
+^enter *$
+
+act
+scene
+dramatis personae
+
+
+note: can keep track of when people enter and exit
+
+handle stage direction
+handle parens

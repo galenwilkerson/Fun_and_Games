@@ -1,0 +1,5 @@
+98.130.54.25
+
+nameserver:
+ns13.ixwebhosting.com
+ns14.ixwebhosting.com

@@ -1,0 +1,60 @@
+
+
+Text would be much more coherent if FakeSpeare used third-order text:
+http://www.data-compression.com/theory.html
+
+This requires a 3-dimensional matrix
+P(Xi=d|Xi-1=b,Xi-2=a)
+
+Basically:  
+- let wordA = "the", wordB = "dog", for each wordC "bites", "walks", "eats", etc., we now count how many times wordC occurs.
+- After done counting, we convert the counts to frequencies.
+- Once we have frequencies, we should cumulative-sum them, to get "buckets"
+
+-------------------
+
+Also, use of the standard c++ library's Map class might allow smaller (8 or 16 bit) numbers.
+
+http://en.wikipedia.org/wiki/Map_(C%2B%2B)
+
+This might allow much more data to be stored.
+
+We need to be able to serialize this to the iPhone memory.
+http://www.boost.org/doc/libs/1_36_0/libs/serialization/doc/index.html
+
+How to build Boost for iPhone
+http://www.mani.de/backstage/?p=159
+
+--------------------
+
+ParodyMatrix Class
+
+Probably need to create a class to handle all operations on sparse dictionary
+
+Matrix Creation:
+- initialization (choose 1st, 2nd, 3rd, etc. order = dimensionality of matrix)
+  also, choose precision
+
+- insertion (create entry if non-existent, or increment value)
+- conversion of column to frequency
+- conversion of column to buckets (cumulative sum)
+
+Getters/Setters:
+- get value from key(s) input
+- set value from key
+
+I/O:
+- parse file into unique word list
+- create matrix from file
+- serialization
+- de-serialization
+
+Math: (for fun)
+- matrix mult?
+- eigenvalues/vectors?
+
+Text Creation:
+- lookup (for text generation)
+- text generation
+
+
